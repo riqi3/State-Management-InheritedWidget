@@ -11,7 +11,10 @@ class StateManagementBasics extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      home: const home(),
+      home: ApiProvider(
+        api: Api(),
+        child: const home(),
+      ),
     );
   }
 }
